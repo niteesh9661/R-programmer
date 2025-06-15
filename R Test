@@ -1,0 +1,739 @@
+# variable name (anay name)
+# Assignement opertor (=)
+# Data types (a
+ny number)
+
+# 3 Types of Data types
+
+# 1) Numerical/ Double Data Type 
+eg:
+  
+  a=100
+b=200
+
+# 2) Character Data Type
+Eg:
+
+c= "Hello"
+
+d= "niteesh"
+
+# 3) Logical Data Type1Font
+Eg:
+  
+  e= 5>4
+f=5<4
+
+# Assignment   3 Tpye
+
+# 1) =
+#2)  <-
+#3)  ->
+
+# Variable Name dos & dont's
+
+# Case Sensitive 
+
+# Only Do's
+
+Sims=100
+Sims1=120
+S2=300
+Sims_mba=500
+
+# Don'ts use 
+2sims=300
+sims mba=400
+
+
+# Logical operator
+
+# >  <  >=  <-  =  =
+! ~ (Notequal)  ! ( not)  & (and)  ! (or)
+
+Eg:
+  
+5==5
+6<5
+5!=5
+!(6<3)
+(5==5)& (8>4) & (6==4)
+(5==5)| (8>9)| (6==4)
+
+
+# Fundamentals or R
+# R objects - 6
+# vectors # List # Matrix # Arrays # Factors # Data Frame 
+
+# vectors - All codes in R is a vector
+# Series pf same data types in a variable name
+a=10
+b="hello"
+c=7>6
+
+# Function in R - Formulas in Excel
+# combine = c()
+shrath=c(33,34,35,32,31)
+
+sub=c("kan","soc","sci","mat","hist")
+
+logics=c(5>4,5==5,3<2,7==8,9>6)
+
+# Calculations in vectors
+
+a=c(10,20,30,40,50)
+
+b=c(1,2,3,4,5,6,7,8,9,10)
+
+c=c(11,22,33)
+
+d=c(1,2,3,4,5)
+
+a+b
+a+d
+a+c
+b+c
+
+# Extract data from a vector []
+
+a=c(10,20,30,40,50,60,70,80,90,100)
+
+#   1  2  3  4  5  6  7  8  9  10
+
+# Positive 3 types
+
+a[8]
+
+a[5:9]
+
+a[c(2,5,7,9)]
+
+# Negatives 3 types 
+
+a[-8]
+
+a[-5:-9]
+
+a[c(-2,-5,-7,-9)]
+
+# Data Frames
+
+# Import data 
+#read.csv()   file.choose()
+  demo=read.csv(file.choose())
+  
+  movie=read.csv(file.choose())
+  
+#explore datframe
+# str()  summary()
+  
+str(demo)
+summary(demo)  
+
+str(movie)
+summary(movie)
+
+# Function - Formulas in excel
+# Package - collection of functions doing a sing
+# 5000 + free - CRAN
+
+
+# packages
+# Install - one time
+# Activate -everytime when you want use
+
+ ggplot2
+ 
+ 
+ # Function in R ( Formulas in Excel)
+ 
+ 
+ 
+# change col names-
+ colnames(demo)=c("countryname","countrycode","Birthrate","Internetusers","Incomegroup")
+ 
+ colnames(movie)=c("Film","Genre","Criticrating","Audienceratings","Budget","Year")
+ 
+ 
+ # Dollars in Dataframes - col extract
+ 
+demo$Birthrate
+ 
+demo$Incomegroup
+ 
+demo$countryname
+
+# cal in dataframe
+
+demo$Birthrate + demo$Internetusers
+
+demo$Birthrate / demo$Internetusers
+
+# Add col
+ demo$revenue=
+   demo$Birthrate + demo$Internetusers
+ 
+ demo$profit=
+   demo$Birthrate / demo$Internetusers
+ 
+ # delete col
+ 
+ demo$revenue=NULL
+ demo$profit=NULL
+
+# Subsetting in Dtaframe - extract data
+# demo[row,col]
+              
+ a=demo[1:5,3:5]
+
+ b=demo[50:100,1:5]
+ 
+ c=demo[20:50,]
+ 
+ d=demo[,3:5]
+
+ e=demo[c(1,5,10),]
+ 
+ f=demo[,c(1,3,5)]
+ 
+ g=movie[1:5,3:5]
+ 
+
+# Filtering in dataframes
+#[row,col] $ logics ( > < >= <= =! ! & | ==)
+
+ a=demo[demo$internetusers>80,]
+ 
+ b=demo[demo$Birthrate<10,]
+ 
+ c=demo[demo$incomegroup=="High income",]
+ 
+ d=demo[demo$Birthrate<40 & demo$internetusers>70,]
+ 
+ e=demo[demo$Birthrate>40,]
+ 
+ 
+# Factoring in dataframes
+ demo$Income.Group=factor(demo$Income.Group)
+ 
+ movie$Genre=factor(movie$Genre)
+ 
+ movie$Year=factor(movie$Year) 
+ 
+ summary(demo)
+ 
+ summary(movie)
+ 
+
+ #Execute below code to generate three new vectors
+ Countries <- c("Aruba","Afghanistan","Angola","Albania","United Arab Emirates","Argentina","Armenia","Antigua and Barbuda","Australia","Austria","Azerbaijan","Burundi","Belgium","Benin","Burkina Faso","Bangladesh","Bulgaria","Bahrain","Bahamas, The","Bosnia and Herzegovina","Belarus","Belize","Bermuda","Bolivia","Brazil","Barbados","Brunei Darussalam","Bhutan","Botswana","Central African Republic","Canada","Switzerland","Chile","China","Cote d'Ivoire","Cameroon","Congo, Rep.","Colombia","Comoros","Cabo Verde","Costa Rica","Cuba","Cayman Islands","Cyprus","Czech Republic","Germany","Djibouti","Denmark","Dominican Republic","Algeria","Ecuador","Egypt, Arab Rep.","Eritrea","Spain","Estonia","Ethiopia","Finland","Fiji","France","Micronesia, Fed. Sts.","Gabon","United Kingdom","Georgia","Ghana","Guinea","Gambia, The","Guinea-Bissau","Equatorial Guinea","Greece","Grenada","Greenland","Guatemala","Guam","Guyana","Hong Kong SAR, China","Honduras","Croatia","Haiti","Hungary","Indonesia","India","Ireland","Iran, Islamic Rep.","Iraq","Iceland","Israel","Italy","Jamaica","Jordan","Japan","Kazakhstan","Kenya","Kyrgyz Republic","Cambodia","Kiribati","Korea, Rep.","Kuwait","Lao PDR","Lebanon","Liberia","Libya","St. Lucia","Liechtenstein","Sri Lanka","Lesotho","Lithuania","Luxembourg","Latvia","Macao SAR, China","Morocco","Moldova","Madagascar","Maldives","Mexico","Macedonia, FYR","Mali","Malta","Myanmar","Montenegro","Mongolia","Mozambique","Mauritania","Mauritius","Malawi","Malaysia","Namibia","New Caledonia","Niger","Nigeria","Nicaragua","Netherlands","Norway","Nepal","New Zealand","Oman","Pakistan","Panama","Peru","Philippines","Papua New Guinea","Poland","Puerto Rico","Portugal","Paraguay","French Polynesia","Qatar","Romania","Russian Federation","Rwanda","Saudi Arabia","Sudan","Senegal","Singapore","Solomon Islands","Sierra Leone","El Salvador","Somalia","Serbia","South Sudan","Sao Tome and Principe","Suriname","Slovak Republic","Slovenia","Sweden","Swaziland","Seychelles","Syrian Arab Republic","Chad","Togo","Thailand","Tajikistan","Turkmenistan","Timor-Leste","Tonga","Trinidad and Tobago","Tunisia","Turkey","Tanzania","Uganda","Ukraine","Uruguay","United States","Uzbekistan","St. Vincent and the Grenadines","Venezuela, RB","Virgin Islands (U.S.)","Vietnam","Vanuatu","West Bank and Gaza","Samoa","Yemen, Rep.","South Africa","Congo, Dem. Rep.","Zambia","Zimbabwe")
+ Codes <- c("ABW","AFG","AGO","ALB","ARE","ARG","ARM","ATG","AUS","AUT","AZE","BDI","BEL","BEN","BFA","BGD","BGR","BHR","BHS","BIH","BLR","BLZ","BMU","BOL","BRA","BRB","BRN","BTN","BWA","CAF","CAN","CHE","CHL","CHN","CIV","CMR","COG","COL","COM","CPV","CRI","CUB","CYM","CYP","CZE","DEU","DJI","DNK","DOM","DZA","ECU","EGY","ERI","ESP","EST","ETH","FIN","FJI","FRA","FSM","GAB","GBR","GEO","GHA","GIN","GMB","GNB","GNQ","GRC","GRD","GRL","GTM","GUM","GUY","HKG","HND","HRV","HTI","HUN","IDN","IND","IRL","IRN","IRQ","ISL","ISR","ITA","JAM","JOR","JPN","KAZ","KEN","KGZ","KHM","KIR","KOR","KWT","LAO","LBN","LBR","LBY","LCA","LIE","LKA","LSO","LTU","LUX","LVA","MAC","MAR","MDA","MDG","MDV","MEX","MKD","MLI","MLT","MMR","MNE","MNG","MOZ","MRT","MUS","MWI","MYS","NAM","NCL","NER","NGA","NIC","NLD","NOR","NPL","NZL","OMN","PAK","PAN","PER","PHL","PNG","POL","PRI","PRT","PRY","PYF","QAT","ROU","RUS","RWA","SAU","SDN","SEN","SGP","SLB","SLE","SLV","SOM","SRB","SSD","STP","SUR","SVK","SVN","SWE","SWZ","SYC","SYR","TCD","TGO","THA","TJK","TKM","TLS","TON","TTO","TUN","TUR","TZA","UGA","UKR","URY","USA","UZB","VCT","VEN","VIR","VNM","VUT","PSE","WSM","YEM","ZAF","COD","ZMB","ZWE")
+ Regions <- c("The Americas","Asia","Africa","Europe","Middle East","The Americas","Asia","The Americas","Oceania","Europe","Asia","Africa","Europe","Africa","Africa","Asia","Europe","Middle East","The Americas","Europe","Europe","The Americas","The Americas","The Americas","The Americas","The Americas","Asia","Asia","Africa","Africa","The Americas","Europe","The Americas","Asia","Africa","Africa","Africa","The Americas","Africa","Africa","The Americas","The Americas","The Americas","Europe","Europe","Europe","Africa","Europe","The Americas","Africa","The Americas","Africa","Africa","Europe","Europe","Africa","Europe","Oceania","Europe","Oceania","Africa","Europe","Asia","Africa","Africa","Africa","Africa","Africa","Europe","The Americas","The Americas","The Americas","Oceania","The Americas","Asia","The Americas","Europe","The Americas","Europe","Asia","Asia","Europe","Middle East","Middle East","Europe","Middle East","Europe","The Americas","Middle East","Asia","Asia","Africa","Asia","Asia","Oceania","Asia","Middle East","Asia","Middle East","Africa","Africa","The Americas","Europe","Asia","Africa","Europe","Europe","Europe","Asia","Africa","Europe","Africa","Asia","The Americas","Europe","Africa","Europe","Asia","Europe","Asia","Africa","Africa","Africa","Africa","Asia","Africa","Oceania","Africa","Africa","The Americas","Europe","Europe","Asia","Oceania","Middle East","Asia","The Americas","The Americas","Asia","Oceania","Europe","The Americas","Europe","The Americas","Oceania","Middle East","Europe","Europe","Africa","Middle East","Africa","Africa","Asia","Oceania","Africa","The Americas","Africa","Europe","Africa","Africa","The Americas","Europe","Europe","Europe","Africa","Africa","Middle East","Africa","Africa","Asia","Asia","Asia","Asia","Oceania","The Americas","Africa","Europe","Africa","Africa","Europe","The Americas","The Americas","Asia","The Americas","The Americas","The Americas","Asia","Oceania","Middle East","Oceania","Middle East","Africa","Africa","Africa","Africa")
+ 
+#data.frame(a,b,c)
+ 
+ regions=data.frame(Countries,Codes,Regions)
+ 
+ # merge data
+ # merge(x,y,by.x=by.y=)
+ 
+ newdemo = merge(demo,Regions,by.x = 'Country.Code', by.y= 'Codes')
+ 
+ newdemo$countries=NULL
+ 
+ # factoring
+ newdemo$Income.Group=factor(newdemo$Income.Group)
+ newdemo$Regions=kfactor(newdemo$Regions)
+ 
+ #Always verify after doing each step in environment or using summary()
+ 
+ # Analysis using ggplot2 
+ #Activate the package -ggplot2
+#quick plot
+ #qplot(data,x,y,size,color,shape,alpha,main)
+ 
+ qplot(data=demo,Birth.rate,y=Internet.users)
+ 
+ qplot(data=demo,x=Birth.rate,y=Internet.users,size=I(6),color=I("red"))
+
+ qplot(data=demo,x=Birth.rate,y=Internet.users,size=I(6),color=I(Income.Group)
+    
+       
+qplot(data=demo,x=Birth.rate,y=Internet.users,
+size=I(6),color=Income.Group,shape=I(17),alpha=0.7,main="Analysis")
+
+qplot(data=demo,x=Birth.rate,y=Internet.users,size=I(10),color=I("green"))
+ 
+
+qplot(data=demo,x=Birth.rate,y=Internet.users,size=I(6),color=I("orange"))
+
+
+qplot(data=demo,x=Birth.rate,y=Internet.users,size=I(6),color=I("purple"))
+
+
+
+Movie=read.csv(file.choose())
+
+
+colnames(Movie)=c("Film","Genre","Criticrating","Audienceratings","Budget","Year")
+
+
+# Grammar of Graphics
+
+# Analyasis - activate the ggplot
+#qplot(data,x,y,size,color,alpha,space,main)
+
+#ggplot(data,aes(x,y,size,color))+geom+stats+facet+cord+theme
+
+ggplot(data=Movie,aes(x=Criticrating,y=Audienceratings))+geom_point()
+
+
+ggplot(data=Movie,aes(x=Criticrating,y=Audienceratings,
+                      size=I(4),color=I("red")))+geom_point()
+
+
+ggplot(data=Movie,aes(x=Criticrating,y=Audienceratings,
+                      size=Budget,color=Genre))+geom_point()
+
+
+# plotting layers
+
+a=ggplot(data=Movie,aes(x=Criticrating,y=Audienceratings,
+                        size=Budget,color=Genre))
+
+a+geom_point()
+
+
+a+geom_point()+geom_line()
+
+
+a+geom_line()+geom_point()
+
+
+# overiding aes
+
+
+a=ggplot(data=Movie,aes(x=Criticrating,y=Audienceratings,
+                        size=Budget,color=Genre))
+
+a+geom_point()
+
+a+geom_point(aes(x=Budget))+xlab("Budget")
+
+a+geom_point(aes(y=Genre))+ylab("Genre")
+
+
+# Statistical Transformations - adding layers of geom
+# Graph 1
+
+a=ggplot(data=Movie,aes(x=Criticrating,y=Audienceratings,
+                        size=Budget,color=Genre))
+
+a+geom_point()+geom_smooth(fill=NA)
+
+
+# Grapg 2
+
+b=ggplot(data=Movie,aes(x=Criticrating,y=Audienceratings,
+                        size=I(2),color=Genre))
+
+b+geom_boxplot()+geom_jitter()
+
+# Facets facet_grid(row~col) - factors only
+# Coordinates coord_cartensian() xlim, ylim
+#themes - xlab, ylab, ggtitle
+
+# Grapg 1
+a=ggplot(data=movie,aes(x=Criticrating,y=Audienceratings,
+                        size=Budget,color=Genre))
+
+a+geom_point()+geom_smooth(fill=NA)+facet_grid(Genre~.)
+
+
+a+geom_point()+geom_smooth(fill=NA)+facet_grid(.~Year)
+
+a+geom_point()+geom_smooth(fill=NA)+facet_grid(Genre~Year)
+
+
+a+geom_point()+geom_smooth(fill=NA)+facet_grid(Genre~Year)+
+  coord_cartesian(ylim=c(0,100))+ggtitle("HEADING HERE")
+
+
+#Histogram graphs - x asix only - binwidth complusory
+
+# Graph 1
+ggplot(data=movie,aes(x=Budget, fill=Genre))+
+  geom_histogram(binwidth = 10,color="black")
+
+# Graph 2
+
+ggplot(data=movie,aes(x=Criticrating))+
+  geom_histogram(binwidth = 10,color="blue", fill="white")
+
+# Graph 3
+
+ggplot(data=movie,aes(x=Audienceratings))+
+  geom_histogram(binwidth = 10,color="red", fill="yellow")
+
+
+# Template for building a predictive Model
+#x = independent values \ y= dependent values
+
+#1) change col names - to make code easier
+#2 Import data
+#3) Prepare/ clean Data - Missing - merge - columns- calculations
+#4) Explore data - summary() str() - EDA
+#5) Factoring & Encoding
+#6) Split data - Training 
+#7) Feature scaling (only for classification) - ONLY FOR NUMBER COLUMNS
+
+
+
+
+Datasets=read.csv(file.choose())
+
+# Fix missing Values
+# New code:is.na() mean() - subsetting - dollars
+
+Datasets$Age[is.na(Datasets$Age)]- = mean(Datasets$Age, na.rm = TRUE)
+
+Datasets$Salary[is.na(Datasets$Salary)] = mean(Datasets$Salary, na.rm = TRUE)
+
+
+# factor
+#factor(datasets$colomn, levels, lebels)
+
+#datasets$country = factor(datasets$country)
+
+Datasets$Counrty = factort(Datasets$Country,
+                           levels = c("Framce", "Spain", "Germany"),
+                           labels = c(1, 2, 3))
+
+#datasets$Purchased=factor(datasets$Purchased)
+
+Datasets$Purchased = factor(Datasets$Purchased,
+                            levels = c('NO', 'Yes'),
+                            labels = c(0, 1))
+
+
+# Spilting Datasets into training & Tesh - catolls
+# Activate the package librabry(caTools)
+
+
+set.seed(123)
+split = sample.split(Datasets$Purchased, SplitRatio = 0.8)
+training_set = subset(Datasets, split == TRUE)
+test_set = subset(Datasets, split == FALSE)
+
+# Feature scalling [row,col]
+
+ training_set[,1:2] = scale(training_set[,2:3])
+ 
+ test_set[,2:3] = scale(test_set[,2:3])
+ 
+# Simple Linear Regression Model
+ 
+# Import data
+ Datasets=read.csv(file.choose())
+ 
+ # Explore data - EDA - Missing - understand
+ str(Datasets)
+ summary(Datasets)
+ 
+ # Factoring & Encoding 
+ 
+# Split Datasets - Activate catools
+ set.Seed(123)
+ split = sample.split(Datasets$Salary, SplitRatio = 2/3)
+ training_set = subset(Datasets, split=TRUE)
+ test_set=subset(Datasets,split=False)
+ 
+ 
+ # Feature scalin - NO
+ 
+ # Build the model
+ # Linear model - lm(formula,data)
+ # formula= dependent variable ~ Independent Variable
+ 
+ regression=lm(formula=Salary~YearsExperience,data = training_set)
+ 
+ summary(regression)
+ 
+ # Prediction using test set from model
+ y_pred=predict(regression,data=test_set)
+ 
+ # comparing prediction & original answer
+ y_pred
+ 
+ test_sets$Salary
+ 
+ # Visualising the Training set results
+ library(ggplot2)
+ ggplot() +
+   geom_point(aes(x = training_set$YearsExperience, y = training_set$Salary),
+              colour = 'red') +
+   geom_line(aes(x = training_set$YearsExperience, y = predict(regression, newdata = training_set)),
+             colour = 'blue') +
+   ggtitle('Salary vs Experience (Training set)') +
+   xlab('Years of experience') +
+   ylab('Salary')
+ 
+ # Visualising the Test set results
+ library(ggplot2)
+ 
+ 
+ # Import data
+ Datasets=read.csv(file.choose())
+ 
+ # Explore
+ str(Datasets)
+ summary(Datasets)
+ 
+ # Factoring
+ Datasets $State = factor(Datasets$State,
+                          levels =  c('New York','California','Florida'),
+                          labels = c(1,2,3))
+ 
+ 
+ 
+ 
+ # Split data - catools
+ 
+set.seed(123)
+split = sample.split(Datasets$Profit, SplitRatio = 0.8)
+training_set = subset(Datasets, split == TRUE)
+test_set = subset(Datasets, split == FALSE)
+
+
+# build model using training data
+regressor= lm(formula= Profit~.,data=training_set)
+
+summary(regressor)
+
+# Rebuild the model for accuracy
+regressor= lm(formula= Profile~R.D. Spend+State,data=training_set)
+
+summary(regressor)
+
+# prediction using test set from model
+y_pred=predict(regressor,newdata=test_set)
+
+# Compare
+y_pred
+test_set$Profit
+
+#ggiraph, ggiraphExtra
+
+#catools, ggplot2, ggiraph, ggirapgExtra
+# Viusalisation ?ggpredict()
+
+ggPredict(regressor,se=TRUE, interactive = FALSE)
+
+
+# Example
+
+Datasets=read.csv(file.choose())
+
+Datasets=(row,col)
+Datasets=(3:5)
+
+# Explore data
+str(Datasets)
+summary(Datasets)
+
+#Factoring & Encoding
+
+Datasets$Purchased=factor(Datasets$Purchased,levels = C(0, 1))
+
+
+# Logistic Regression using social Network Ad file
+# Split data - caTools
+set.seed(123)
+split = sample.split(Datasets$Purchased, SplitRatio = 0.75)
+training_set = subset(Datasets, split == TRUE)
+test_set = subset(Datasets, split == FALSE)
+
+# Feature scaling - Only number col - classification
+training_set[-3] = scale(training_set[-3])
+test_set[-3] = scale(test_set[-3])
+
+
+# Build model for Training data
+#glm(formula=DV~IV,data=training,family=binomial)
+
+classifie = glm(formula = Purchased ~.,family = binomial,
+                data = training_set)
+
+summary(classifier)
+# Predict using, model - Test set
+#predict(classfier,tyupe='respo0nce',newdata=testdata)
+prob_pred = predict(classifer, type = 'response',newdata = test_set[-3])
+
+y_pred = ifelse(prob_pred > 0,5, 1, 0)
+
+# Compare
+y_pred
+test_set$Purchsed
+
+
+# Build Confusion matrix
+#table(actualanswer,predict)
+cm = table(test_set$Purchased, y_pred > 0.5)
+cm
+ 
+
+
+# Build decision Tree classification model using training data
+#activate - rpart
+
+classifier rpart(formula = Piutrchased ~.,
+                 data = training_set)
+
+summary(classifier)
+
+
+# Predict using model for test data
+y_pred = predict(classifier, newdata = test_set[-3], type = 'class')
+y_pred
+
+# Confusion Matrix
+cm=table(test_set$Purchased,y_pred)
+
+
+
+# New project
+# Fixing missing value & Outliers
+# 3 Types of fixing missing values
+
+# Import data
+Dataset=read.csv(file.choose())
+
+
+# Explore data
+
+str(Dataset)
+
+summary(Dataset)
+
+# 3 Types of fixing missing value
+# 1) Last CArry forward method
+library(zoo)
+Dataset.NAlocf = na.locf(Dataset)
+
+# 2) Fill with same number in all blank
+Dataset.NAlocf = na.fill(Dataset,33)
+
+# 3) Average Method
+Dataset$mydata[is.na(Dataset$mydata)]=mean(Dataset$mydata,na.rm = TRUE)
+
+
+# fix outliers - activate forecast
+summary(Dataset)
+
+Dataset$mydata=tsclean(Dataset$mydata)
+
+
+# EDA Processs
+
+str(Dataset)
+
+summary(Dataset)
+
+# General Analysis
+ggplot(data=Dataset,aes(x=mydata))+
+geom_histogram(binwidth = 10,fill='white',color='red')
+
+
+
+
+
+
+
+#Steps of Time Series - Pattern in data - Forecaste
+
+#1) change col names if required in excel
+#2 Import data
+#3) Clean data - Missing Values, outliers, merge,aplit etc
+#4) Convert the data to itme series object ts object
+#5) EDA- STR SUMMARY
+#6) Multipile Graph for understanding pattern
+#7) Forcasting using ARIMA MODEL
+
+
+Dataset=read.csv(file.choose())
+
+# Check missing values & outliers
+str(store)
+summary(store)
+
+# Build ts oject - time series
+#ts(data,start,frequency)
+
+myts=ts(data=store$X2,start = 1,frequency = 12)
+
+# Analysis using graphs
+
+# Graph without ggplot (use any one method in exam)
+# Graph 1
+plot(myts)
+
+# Graph 2
+monthplot(myts, lables = 1:12,xlab = "Bidaily Units")
+
+
+# Graph 3
+seasonplot(myts,season.labels = F,xlab="")
+
+
+# or using ggplot package
+
+
+
+# Artificial Neural Network
+
+# Importing the dataset
+dataset = read.csv(file.choose())
+dataset = dataset[4:14]
+
+# Encoding the categorical variables as factors
+dataset$Geography = as.numeric(factor(dataset$Geography,
+                                      levels = c('France', 'Spain', 'Germany'),
+                                      labels = c(1, 2, 3)))
+dataset$Gender = as.numeric(factor(dataset$Gender,
+                                   levels = c('Female', 'Male'),
+                                   labels = c(1, 2)))
+
+# Splitting the dataset into the Training set and Test set
+# install.packages('caTools')
+library(caTools)
+set.seed(123)
+split = sample.split(dataset$Exited, SplitRatio = 0.8)
+training_set = subset(dataset, split == TRUE)
+test_set = subset(dataset, split == FALSE)
+
+# Feature Scaling
+training_set[-11] = scale(training_set[-11])
+test_set[-11] = scale(test_set[-11])
+
+# Fitting ANN to the Training set
+# install.packages('h2o')
+library(h2o)
+h2o.init(nthreads = -1)
+model = h2o.deeplearning(y = 'Exited',
+                         training_frame = as.h2o(training_set),
+                         activation = 'Rectifier',
+                         hidden = c(5,5),
+                         epochs = 100,
+                         train_samples_per_iteration = -2)
+
+# Predicting the Test set results
+y_pred = h2o.predict(model, newdata = as.h2o(test_set[-11]))
+y_pred = (y_pred > 0.5)
+y_pred = as.vector(y_pred)
+
+# Making the Confusion Matrix
+cm = table(test_set[, 11], y_pred)
+
+# h2o.shutdown()
+
+
